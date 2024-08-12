@@ -1,0 +1,239 @@
+.filtre{
+    background-color: #5e17eb;
+}
+
+
+.event-item{
+    border: 2px solid rgb(207, 15, 31);
+     padding: 8px;
+      margin:8px;
+}
+
+/* Display filter form */
+
+/* Style for the form container */
+#filter-form {
+    max-width: 1000px; /* Set a max width for the form */
+    margin: 0 auto;    /* Center the form horizontally */
+    padding: 20px;     /* Add padding around the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Style for the artist input */
+#filter-form #artist {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Container for the date inputs */
+.dates {
+    display: flex;
+    width: 100%;
+    gap: 10px; /* Space between the date inputs */
+}
+
+/* Style for the date inputs */
+.dates input[type="date"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 50%;
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Ensure date inputs take up 50% width on larger screens */
+@media (min-width: 768px) {
+    .dates input[type="date"] {
+        max-width: 50%; /* Each input will be 50% of the container's width */
+    }
+}
+
+/* Style for the suggestions box */
+#artist-suggestions {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-height: 200px; /* Limit height to avoid overflow */
+    overflow-y: auto;  /* Add scrollbar if content overflows */
+    position: absolute; /* Position suggestions below the input */
+    background-color: #fff;
+    z-index: 1000; /* Ensure suggestions appear above other elements */
+}
+
+/* Style for each suggestion item */
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #eee;
+}
+
+
+/* Style for each suggestion item */
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #eee;
+}
+
+
+
+.suggestions-box {
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    background: #fff;
+    z-index: 9999;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background: #f0f0f0;
+}
+
+
+
+/* Container for the events list */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-decoration: none;
+
+    margin: 10px auto;
+    max-width: 100%; /* Adjust based on your needs */
+    padding: 0 20px;
+}
+
+/* Style for individual event items */
+.event-item {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Layout for the event row */
+.event-item tr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Style for the event image */
+.event-image {
+    width: 100px;
+    height: 100px;
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Style for the event details */
+.event-details {
+    flex: 1;
+    padding: 10px;
+}
+
+.event-details h3 {
+    font-size: 1.5em;
+    margin: 0 0 5px;
+    color: #333;
+}
+
+.event-details p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Style for the button column */
+
+.event-button .button {
+    background-color: #5e17eb;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .event-item tr {
+    }
+
+    .event-details h3 {
+        font-size: 20px;
+    }
+    .event-details h4 {
+        font-size: 15px;
+    }
+
+    
+}
+
+/* Style for pagination */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px 12px;
+    font-size: 1em;
+    color: #5e17eb;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover,
+.pagination span.current {
+    background-color: #5e17eb;
+    color: #fff;
+    border-color: #5e17eb;
+}
+
+/* Responsive pagination */
+@media (max-width: 600px) {
+    .pagination a,
+    .pagination span {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+}
